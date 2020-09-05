@@ -23,21 +23,28 @@ class _ProductScreenState extends State<ProductScreen> {
             appBar: AppBar(
               elevation: 0,
               backgroundColor: Colors.transparent,
-              title: Text(StringConstants.appbarTitle, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[800], fontSize: 20,),),
+              title: Text(StringConstants.appbarTitle, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[800], fontSize: 18,),),
               // centerTitle: true,
-              titleSpacing: 200.0,
+              titleSpacing: 250.0,
 
               leading: Padding(
-                padding: EdgeInsets.zero,
-                child: IconButton(
-                  icon: Image.asset('assets/images/ic_menu_circular.png', height: 100, width: 100, fit: BoxFit.fill),
-                  onPressed: () {}
+                padding: const EdgeInsets.all(5.0),
+                child: Card(
+                  elevation: 5,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(2),
+                    child: IconButton(
+                        icon: Image.asset('assets/images/ic_menu.png', height: 40, width: 40, fit: BoxFit.fill),
+                        onPressed: () {}
+                    ),
+                  ),
                 ),
               ),
               actions: [
                 Padding(
                   padding: const EdgeInsets.only(right: 80),
-                  child: Center(child: Text(StringConstants.appbarTrailing, style: TextStyle(fontSize: 20, color: Colors.grey),)),
+                  child: Center(child: Text(StringConstants.appbarTrailing, style: TextStyle(fontSize: 18, color: Colors.grey),)),
                 )
               ],
             ),

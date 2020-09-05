@@ -33,7 +33,7 @@ flutter:
   assets:
    - assets/images/ic_background_opacity.jpeg
    - assets/images/ic_background.jpeg
-   - assets/images/ic_menu_circular.png
+   - assets/images/ic_menu.png
    - assets/images/img_sample1.png
    - assets/images/img_sample2.png
 
