@@ -2,12 +2,12 @@ import 'package:circular_check_box/circular_check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:kundenberatung/vivek/checkBoxCard.dart';
 
-class CustomerData2 extends StatefulWidget {
+class UserDetailScreen extends StatefulWidget {
   @override
-  _CustomerData2State createState() => _CustomerData2State();
+  State<StatefulWidget> createState() => _UserDetailScreenState();
 }
 
-class _CustomerData2State extends State<CustomerData2> {
+class _UserDetailScreenState extends State<UserDetailScreen> {
   bool _checked = true;
 
   @override

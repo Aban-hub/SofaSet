@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:kundenberatung/vivek/first.dart';
+import 'package:kundenberatung/vivek/product.dart';
+import 'package:kundenberatung/routers/routers.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ProductScreen(),
+      initialRoute: AppRouters.LOGIN_SCREEN,
+      onGenerateRoute: AppRouters.generateRoute,
     );
   }
 }
