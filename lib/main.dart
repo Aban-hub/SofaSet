@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:kundenberatung/vivek/product.dart';
+import 'file:///D:/AndroidProjects/appitron/_git/SofaSet/lib/ui/product_screen.dart';
 import 'package:kundenberatung/routers/routers.dart';
 
 void main() {

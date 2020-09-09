@@ -36,6 +36,10 @@ flutter:
    - assets/images/ic_menu.png
    - assets/images/img_sample1.png
    - assets/images/img_sample2.png
+   - assets/images/img_sample_material1.png
+   - assets/images/img_sample_material2.png
+   - assets/images/ic_edit.png
+   - assets/images/img_sample_size.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

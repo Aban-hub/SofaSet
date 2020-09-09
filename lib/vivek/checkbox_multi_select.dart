@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:kundenberatung/vivek/customCheckBoxListTile.dart';
+import 'package:kundenberatung/vivek/custom_checkbox_tile.dart';
 
-class CheckBoxCard extends StatelessWidget {
+class CheckBoxMultiSelect extends StatelessWidget {
   final String checkBoxTileTitle;
   final bool value;
   final void Function(bool) onChanged;
 
-  const CheckBoxCard(
+  const CheckBoxMultiSelect(
       {Key key,
       this.checkBoxTileTitle,
       this.value,
@@ -19,12 +19,13 @@ class CheckBoxCard extends StatelessWidget {
       elevation: 2,
       shape: StadiumBorder(),
       child: Container(
-        width: width * 0.3,
+        width: width * 0.32,
         child: CustomCheckboxListTile(
-          
             title: Text(checkBoxTileTitle),
             checkColor: Colors.white,
+            dense: true,
             activeColor: Color(0xff002646),
+            inActiveColor: Colors.white,
             value: value,
             onChanged: onChanged),
       ),

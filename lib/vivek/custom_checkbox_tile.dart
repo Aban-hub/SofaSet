@@ -256,6 +256,7 @@ class CustomCheckboxListTile extends StatelessWidget {
     @required this.value,
     @required this.onChanged,
     this.activeColor,
+    this.inActiveColor,
     this.checkColor,
     this.title,
     this.subtitle,
@@ -306,6 +307,11 @@ class CustomCheckboxListTile extends StatelessWidget {
   /// Defaults to accent color of the current [Theme].
   final Color activeColor;
 
+  /// The color to use when this checkbox is checked.
+  ///
+  /// Defaults to accent color of the current [Theme].
+  final Color inActiveColor;
+
   /// The color to use for the check icon when this checkbox is checked.
   ///
   /// Defaults to Color(0xFFFFFFFF).
@@ -355,6 +361,7 @@ class CustomCheckboxListTile extends StatelessWidget {
       value: value, 
       checkColor: checkColor,
       activeColor: activeColor,
+      inactiveColor: inActiveColor,
       onChanged: onChanged ,
        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
       );
