@@ -14,14 +14,16 @@ class LoginScreenState extends State<LoginScreen> {
         body: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-                image: new AssetImage("assets/images/ic_background.jpeg"),
-                fit: BoxFit.cover,
-              )),
+            image: new AssetImage("assets/images/ic_background.jpeg"),
+            fit: BoxFit.cover,
+          )),
           child: Container(
             alignment: Alignment.center,
             child: Column(
               children: [
-                SizedBox(height: MediaQuery.of(context).size.height*0.15,),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.15,
+                ),
                 Container(
                   height: 200.0,
                   width: 400.0,

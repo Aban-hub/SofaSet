@@ -2,8 +2,9 @@ import 'package:circular_check_box/circular_check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:kundenberatung/helpers/strings.dart';
 import 'package:kundenberatung/routers/routers.dart';
-import 'package:kundenberatung/vivek/customTextField.dart';
 import 'package:kundenberatung/widgets/ui_designs.dart';
+
+import 'file:///D:/AndroidProjects/appitron/_git/SofaSet/lib/widgets/customTextField.dart';
 
 class EntryDetailScreen extends StatefulWidget {
   @override
@@ -79,9 +80,8 @@ class EntryDetailScreenState extends State<EntryDetailScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
-
                             Container(
-                              height: MediaQuery.of(context).size.height*0.74,
+                              height: MediaQuery.of(context).size.height * 0.74,
                               child: Column(
                                 children: [
                                   Row(
@@ -161,7 +161,8 @@ class EntryDetailScreenState extends State<EntryDetailScreen> {
                                                 Text('Gedfs*:'),
                                                 CircularCheckBox(
                                                     checkColor: Colors.white,
-                                                    activeColor: Color(0xff002646),
+                                                    activeColor:
+                                                        Color(0xff002646),
                                                     value: _checked,
                                                     onChanged: (value) {
                                                       setState(() {
@@ -174,7 +175,8 @@ class EntryDetailScreenState extends State<EntryDetailScreen> {
                                                 ),
                                                 CircularCheckBox(
                                                     checkColor: Colors.white,
-                                                    activeColor: Color(0xff002646),
+                                                    activeColor:
+                                                        Color(0xff002646),
                                                     value: _checked,
                                                     onChanged: (value) {
                                                       setState(() {
@@ -198,18 +200,22 @@ class EntryDetailScreenState extends State<EntryDetailScreen> {
                                       border: Border.all(color: Colors.black12),
                                     ),
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Expanded(
                                           child: TextFormField(
                                             cursorColor: Color(0xFF2A2AC0),
-                                            keyboardType: TextInputType.multiline,
+                                            keyboardType:
+                                                TextInputType.multiline,
                                             maxLines: 7,
                                             decoration: InputDecoration(
                                                 border: InputBorder.none,
                                                 hintText: 'edfnienfiowsemf',
-                                                hintStyle: TextStyle(fontSize: 16)),
+                                                hintStyle:
+                                                    TextStyle(fontSize: 16)),
                                           ),
                                         ),
                                         CircleAvatar(
@@ -225,7 +231,6 @@ class EntryDetailScreenState extends State<EntryDetailScreen> {
                                 ],
                               ),
                             ),
-
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.end,
@@ -236,7 +241,6 @@ class EntryDetailScreenState extends State<EntryDetailScreen> {
                                 })
                               ],
                             )
-
                           ],
                         ),
                       ),

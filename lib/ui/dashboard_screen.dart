@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kundenberatung/helpers/strings.dart';
+import 'package:kundenberatung/models/entry_steps_model.dart';
 import 'package:kundenberatung/routers/routers.dart';
 import 'package:kundenberatung/ui/budget_screen.dart';
 import 'package:kundenberatung/ui/feature_screen.dart';
@@ -20,11 +21,18 @@ class DashboardScreenState extends State<DashboardScreen>
   var tabIndex = 0;
   bool tabRefresh = true;
 
+  static List<EntryStepsModel> stepsStatus = new List();
   static List<Widget> entryTabs = new List();
 
   @override
   void initState() {
     super.initState();
+    stepsStatus.add(EntryStepsModel("Produkt", "selected"));
+    stepsStatus.add(EntryStepsModel("Stil", "notSelected"));
+    stepsStatus.add(EntryStepsModel("Bezug", "notSelected"));
+    stepsStatus.add(EntryStepsModel("Funktionen", "notSelected"));
+    stepsStatus.add(EntryStepsModel("MaBe", "notSelected"));
+    stepsStatus.add(EntryStepsModel("Budget", "notSelected"));
     entryTabs = getTabDesigns();
   }
 
@@ -70,7 +78,9 @@ class DashboardScreenState extends State<DashboardScreen>
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         GestureDetector(
                           onTap: () {},
                           child: new Text(
@@ -169,22 +179,49 @@ class DashboardScreenState extends State<DashboardScreen>
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      UIDesigns.tabButton("Produkt", true, () {
+                                      UIDesigns.tabButton(
+                                          stepsStatus[0].getStepName,
+                                          stepsStatus[0].getStatus, () {
                                         setState(() {
                                           tabIndex = 0;
                                           tabRefresh = true;
+
+                                          stepsStatus[0].status = "selected";
+                                          stepsStatus[1].status = "notSelected";
+                                          stepsStatus[2].status = "notSelected";
+                                          stepsStatus[3].status = "notSelected";
+                                          stepsStatus[4].status = "notSelected";
+                                          stepsStatus[5].status = "notSelected";
                                         });
                                       }),
-                                      UIDesigns.tabButton("Stil", false, () {
+                                      UIDesigns.tabButton(
+                                          stepsStatus[1].getStepName,
+                                          stepsStatus[1].getStatus, () {
                                         setState(() {
                                           tabIndex = 1;
                                           tabRefresh = true;
+
+                                          stepsStatus[0].status = "completed";
+                                          stepsStatus[1].status = "selected";
+                                          stepsStatus[2].status = "notSelected";
+                                          stepsStatus[3].status = "notSelected";
+                                          stepsStatus[4].status = "notSelected";
+                                          stepsStatus[5].status = "notSelected";
                                         });
                                       }),
-                                      UIDesigns.tabButton("Bezug", false, () {
+                                      UIDesigns.tabButton(
+                                          stepsStatus[2].getStepName,
+                                          stepsStatus[2].getStatus, () {
                                         setState(() {
                                           tabIndex = 2;
                                           tabRefresh = true;
+
+                                          stepsStatus[0].status = "completed";
+                                          stepsStatus[1].status = "completed";
+                                          stepsStatus[2].status = "selected";
+                                          stepsStatus[3].status = "notSelected";
+                                          stepsStatus[4].status = "notSelected";
+                                          stepsStatus[5].status = "notSelected";
                                         });
                                       }),
                                     ],
@@ -196,23 +233,49 @@ class DashboardScreenState extends State<DashboardScreen>
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      UIDesigns.tabButton("Funktionen", false,
-                                          () {
+                                      UIDesigns.tabButton(
+                                          stepsStatus[3].getStepName,
+                                          stepsStatus[3].getStatus, () {
                                         setState(() {
                                           tabIndex = 3;
                                           tabRefresh = true;
+
+                                          stepsStatus[0].status = "completed";
+                                          stepsStatus[1].status = "completed";
+                                          stepsStatus[2].status = "completed";
+                                          stepsStatus[3].status = "selected";
+                                          stepsStatus[4].status = "notSelected";
+                                          stepsStatus[5].status = "notSelected";
                                         });
                                       }),
-                                      UIDesigns.tabButton("MaBe", false, () {
+                                      UIDesigns.tabButton(
+                                          stepsStatus[4].getStepName,
+                                          stepsStatus[4].getStatus, () {
                                         setState(() {
                                           tabIndex = 4;
                                           tabRefresh = true;
+
+                                          stepsStatus[0].status = "completed";
+                                          stepsStatus[1].status = "completed";
+                                          stepsStatus[2].status = "completed";
+                                          stepsStatus[3].status = "completed";
+                                          stepsStatus[4].status = "selected";
+                                          stepsStatus[5].status = "notSelected";
                                         });
                                       }),
-                                      UIDesigns.tabButton("Budget", false, () {
+                                      UIDesigns.tabButton(
+                                          stepsStatus[5].getStepName,
+                                          stepsStatus[5].getStatus, () {
                                         setState(() {
                                           tabIndex = 5;
                                           tabRefresh = true;
+
+                                          stepsStatus[0].status = "completed";
+                                          stepsStatus[1].status = "completed";
+                                          stepsStatus[2].status = "completed";
+                                          stepsStatus[3].status = "completed";
+                                          stepsStatus[4].status = "completed";
+                                          stepsStatus[5].status = "selected";
                                         });
                                       }),
                                     ],

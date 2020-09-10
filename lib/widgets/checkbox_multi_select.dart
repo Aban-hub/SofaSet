@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kundenberatung/vivek/custom_checkbox_tile.dart';
+import 'file:///D:/AndroidProjects/appitron/_git/SofaSet/lib/widgets/custom_checkbox_tile.dart';
 
 class CheckBoxMultiSelect extends StatelessWidget {
   final String checkBoxTileTitle;
@@ -27,6 +27,7 @@ class CheckBoxMultiSelect extends StatelessWidget {
             activeColor: Color(0xff002646),
             inActiveColor: Colors.white,
             value: value,
+
             onChanged: onChanged),
       ),
     );

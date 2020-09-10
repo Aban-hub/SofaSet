@@ -23,7 +23,6 @@ class SizeScreenState extends State<SizeScreen> {
                 child: Card(
                   child: Column(
                     children: [
-
                       Container(
                         width: MediaQuery.of(context).size.width * 0.14,
                         child: Row(
@@ -42,14 +41,14 @@ class SizeScreenState extends State<SizeScreen> {
                           ],
                         ),
                       ),
-
-                      SizedBox(height: 10,),
-
+                      SizedBox(
+                        height: 10,
+                      ),
                       Row(
                         children: [
-
-                          SizedBox(width: 50,),
-
+                          SizedBox(
+                            width: 50,
+                          ),
                           Container(
                             width: MediaQuery.of(context).size.width * 0.14,
                             child: Row(
@@ -68,7 +67,6 @@ class SizeScreenState extends State<SizeScreen> {
                               ],
                             ),
                           ),
-
                           Expanded(
                             child: Container(
                               height: 100,
@@ -76,13 +74,15 @@ class SizeScreenState extends State<SizeScreen> {
                               child: Transform(
                                 alignment: Alignment.center,
                                 transform: Matrix4.rotationY(rotation),
-                                child: Image.asset('assets/images/img_sample_size.jpeg',
-                                    height: 100, width: 100, fit: BoxFit.fitHeight),
+                                child: Image.asset(
+                                    'assets/images/img_sample_size.jpeg',
+                                    height: 100,
+                                    width: 100,
+                                    fit: BoxFit.fitHeight),
                               ),
                               //Image.network('https://picsum.photos/250?image=9',),
                             ),
                           ),
-
                           Container(
                             width: MediaQuery.of(context).size.width * 0.14,
                             child: Row(
@@ -96,17 +96,19 @@ class SizeScreenState extends State<SizeScreen> {
                                 Expanded(
                                   child: TextField(
                                     keyboardType: TextInputType.number,
-                                    decoration: InputDecoration(contentPadding: const EdgeInsets.all(0)),
+                                    decoration: InputDecoration(
+                                        contentPadding:
+                                            const EdgeInsets.all(0)),
                                   ),
                                 )
                               ],
                             ),
                           ),
-
-                          SizedBox(width: 50,),
+                          SizedBox(
+                            width: 50,
+                          ),
                         ],
                       ),
-
                       Container(
                         width: MediaQuery.of(context).size.width * 0.14,
                         child: Row(
@@ -125,9 +127,9 @@ class SizeScreenState extends State<SizeScreen> {
                           ],
                         ),
                       ),
-
-                      SizedBox(height: 10,),
-
+                      SizedBox(
+                        height: 10,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -167,18 +169,15 @@ class SizeScreenState extends State<SizeScreen> {
                           )
                         ],
                       )
-
                     ],
                   ),
                 ),
               ),
             ),
           ),
-
           SizedBox(
             height: 20,
           ),
-
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
@@ -211,11 +210,9 @@ class SizeScreenState extends State<SizeScreen> {
               ],
             ),
           ),
-
           SizedBox(
             height: 10,
           ),
-
         ],
       ),
     );

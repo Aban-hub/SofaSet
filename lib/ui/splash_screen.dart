@@ -12,5 +12,4 @@ class SplashScreenState extends State<SplashScreen> {
       body: Text('Body'),
     );
   }
-
 }

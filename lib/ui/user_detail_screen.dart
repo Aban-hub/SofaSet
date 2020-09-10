@@ -2,8 +2,9 @@ import 'package:circular_check_box/circular_check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:kundenberatung/helpers/strings.dart';
 import 'package:kundenberatung/models/user_detail_options_model.dart';
-import 'package:kundenberatung/vivek/checkbox_multi_select.dart';
 import 'package:kundenberatung/widgets/ui_designs.dart';
+
+import 'file:///D:/AndroidProjects/appitron/_git/SofaSet/lib/widgets/checkbox_multi_select.dart';
 
 class UserDetailScreen extends StatefulWidget {
   @override
@@ -73,9 +74,9 @@ class UserDetailScreenState extends State<UserDetailScreen> {
                 padding: const EdgeInsets.only(right: 80),
                 child: Center(
                     child: Text(
-                      StringConstants.appbarTrailing,
-                      style: TextStyle(fontSize: 18, color: Colors.grey),
-                    )),
+                  StringConstants.appbarTrailing,
+                  style: TextStyle(fontSize: 18, color: Colors.grey),
+                )),
               )
             ],
           ),
@@ -93,9 +94,8 @@ class UserDetailScreenState extends State<UserDetailScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
-
                             Container(
-                              height: MediaQuery.of(context).size.height*0.74,
+                              height: MediaQuery.of(context).size.height * 0.74,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
@@ -108,16 +108,15 @@ class UserDetailScreenState extends State<UserDetailScreen> {
                                       Text(
                                         "Djsdc modcmos smosx AJADHIWNDOIDNS?",
                                         style: TextStyle(
-                                            fontSize: 14, fontWeight: FontWeight.bold),
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold),
                                       ),
                                     ],
                                   ),
                                   SizedBox(
                                     height: 10,
                                   ),
-
                                   getOptionsList(),
-
                                   SizedBox(
                                     height: 30,
                                   ),
@@ -130,7 +129,8 @@ class UserDetailScreenState extends State<UserDetailScreen> {
                                       Text(
                                         "Djsdc modcmos smosx AJADHIWNDOIDNS?",
                                         style: TextStyle(
-                                            fontSize: 14, fontWeight: FontWeight.bold),
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold),
                                       ),
                                     ],
                                   ),
@@ -148,7 +148,8 @@ class UserDetailScreenState extends State<UserDetailScreen> {
                                               children: <Widget>[
                                                 CircularCheckBox(
                                                     checkColor: Colors.white,
-                                                    activeColor: Color(0xff002646),
+                                                    activeColor:
+                                                        Color(0xff002646),
                                                     value: _checked,
                                                     onChanged: (value) {
                                                       setState(() {
@@ -161,7 +162,8 @@ class UserDetailScreenState extends State<UserDetailScreen> {
                                                 ),
                                                 CircularCheckBox(
                                                     checkColor: Colors.white,
-                                                    activeColor: Color(0xff002646),
+                                                    activeColor:
+                                                        Color(0xff002646),
                                                     value: _checked,
                                                     onChanged: (value) {
                                                       setState(() {
@@ -176,9 +178,7 @@ class UserDetailScreenState extends State<UserDetailScreen> {
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
-                                    children: <Widget>[
-                                      Text('asndifws')
-                                    ],
+                                    children: <Widget>[Text('asndifws')],
                                   ),
                                   SizedBox(
                                     height: 20,
@@ -186,7 +186,6 @@ class UserDetailScreenState extends State<UserDetailScreen> {
                                 ],
                               ),
                             ),
-
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.end,
@@ -194,7 +193,6 @@ class UserDetailScreenState extends State<UserDetailScreen> {
                                 UIDesigns.myButtonWithBorder("Drucken", () {})
                               ],
                             )
-
                           ],
                         ),
                       ),
@@ -216,7 +214,7 @@ class UserDetailScreenState extends State<UserDetailScreen> {
                                   color: Colors.grey,
                                 ),
                                 borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
+                                    BorderRadius.all(Radius.circular(20))),
                             child: Column(
                               // shrinkWrap: true,
                               children: [
@@ -289,5 +287,4 @@ class UserDetailScreenState extends State<UserDetailScreen> {
           );
         });
   }
-
 }

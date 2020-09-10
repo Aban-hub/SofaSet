@@ -6,7 +6,6 @@ import 'package:circular_check_box/circular_check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-
 // Examples can assume:
 // void setState(VoidCallback fn) { }
 
@@ -265,12 +264,12 @@ class CustomCheckboxListTile extends StatelessWidget {
     this.secondary,
     this.selected = false,
     this.controlAffinity = ListTileControlAffinity.platform,
-  }) : assert(value != null),
-       assert(isThreeLine != null),
-       assert(!isThreeLine || subtitle != null),
-       assert(selected != null),
-       assert(controlAffinity != null),
-       super(key: key);
+  })  : assert(value != null),
+        assert(isThreeLine != null),
+        assert(!isThreeLine || subtitle != null),
+        assert(selected != null),
+        assert(controlAffinity != null),
+        super(key: key);
 
   /// Whether this checkbox is checked.
   ///
@@ -358,13 +357,13 @@ class CustomCheckboxListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Widget control = CircularCheckBox(
-      value: value, 
+      value: value,
       checkColor: checkColor,
       activeColor: activeColor,
       inactiveColor: inActiveColor,
-      onChanged: onChanged ,
-       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-      );
+      onChanged: onChanged,
+      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+    );
     Widget leading, trailing;
     switch (controlAffinity) {
       case ListTileControlAffinity.leading:
@@ -388,7 +387,11 @@ class CustomCheckboxListTile extends StatelessWidget {
           isThreeLine: isThreeLine,
           dense: dense,
           enabled: onChanged != null,
-          onTap: onChanged != null ? () { onChanged(!value); } : null,
+          onTap: onChanged != null
+              ? () {
+                  onChanged(!value);
+                }
+              : null,
           selected: selected,
         ),
       ),

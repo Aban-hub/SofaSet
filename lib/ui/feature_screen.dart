@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kundenberatung/models/feature_model.dart';
-import 'package:kundenberatung/vivek/checkbox_multi_select.dart';
+
+import 'file:///D:/AndroidProjects/appitron/_git/SofaSet/lib/widgets/checkbox_multi_select.dart';
 
 class FeatureScreen extends StatefulWidget {
   @override

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kundenberatung/models/feature_model.dart';
-import 'package:kundenberatung/vivek/checkbox_multi_select.dart';
 import 'package:kundenberatung/widgets/ui_designs.dart';
+
+import 'file:///D:/AndroidProjects/appitron/_git/SofaSet/lib/widgets/checkbox_multi_select.dart';
 
 class BudgetScreen extends StatefulWidget {
   @override
@@ -34,20 +35,17 @@ class BudgetScreenState extends State<BudgetScreen> {
       padding: const EdgeInsets.only(top: 30, bottom: 20, left: 20, right: 20),
       child: Column(
         children: [
-
           Expanded(child: getFeatureList()),
-
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: Center(
               child: UIDesigns.myButtonWithBorder("keine Angaben", () {}),
             ),
           ),
-
           TextField(
               maxLines: 7,
               autofocus: false,
-              style:new TextStyle(fontSize: 14.0, color: Color(0xFFbdc6cf)),
+              style: new TextStyle(fontSize: 14.0, color: Color(0xFFbdc6cf)),
               controller: _textController,
               decoration: InputDecoration(
                 hintText: 'Notizen',
@@ -61,8 +59,7 @@ class BudgetScreenState extends State<BudgetScreen> {
                   borderSide: new BorderSide(color: Colors.white),
                   borderRadius: new BorderRadius.circular(20),
                 ),
-              )
-          ),
+              )),
         ],
       ),
     );
@@ -93,5 +90,4 @@ class BudgetScreenState extends State<BudgetScreen> {
           );
         });
   }
-
 }
