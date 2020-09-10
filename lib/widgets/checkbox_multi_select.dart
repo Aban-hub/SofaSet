@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'file:///D:/AndroidProjects/appitron/_git/SofaSet/lib/widgets/custom_checkbox_tile.dart';
+
+import 'custom_checkbox_tile.dart';
 
 class CheckBoxMultiSelect extends StatelessWidget {
   final String checkBoxTileTitle;

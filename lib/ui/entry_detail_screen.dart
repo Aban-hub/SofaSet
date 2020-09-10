@@ -2,9 +2,9 @@ import 'package:circular_check_box/circular_check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:kundenberatung/helpers/strings.dart';
 import 'package:kundenberatung/routers/routers.dart';
+import 'package:kundenberatung/widgets/customTextField.dart';
 import 'package:kundenberatung/widgets/ui_designs.dart';
 
-import 'file:///D:/AndroidProjects/appitron/_git/SofaSet/lib/widgets/customTextField.dart';
 
 class EntryDetailScreen extends StatefulWidget {
   @override

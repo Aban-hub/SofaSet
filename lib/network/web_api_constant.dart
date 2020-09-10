@@ -1,5 +1,5 @@
  class WebAPIConstant {
 
-   static const String DOCOTR_VERIFIED_STATUS = "get/getdoctorstatus";
+   static const String USER_LOGIN = "login";
 
 }
